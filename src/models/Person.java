@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package datos;
+package models;
 
 /**
  *
  * @author
  */
-public class Persona {
+public class Person {
 
     private int id;
     private String name;
@@ -18,11 +18,11 @@ public class Persona {
     private String schedule;
     private String typeTransport;
     
-    public Persona() {
+    public Person() {
         
     }
 
-    public Persona(int id, String name, int age, String address, int phone, String schedule, String typeTransport) {
+    public Person(int id, String name, int age, String address, int phone, String schedule, String typeTransport) {
         this.id = id;
         this.name = name;
         this.age = age;

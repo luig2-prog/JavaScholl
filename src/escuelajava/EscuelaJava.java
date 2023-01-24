@@ -4,9 +4,10 @@
  */
 package escuelajava;
 
-import datos.Estudiante;
-import datos.Funcionario;
 import javax.swing.JOptionPane;
+
+import models.Student;
+import models.PublicWorkers;
 
 /**
  *
@@ -22,7 +23,8 @@ public class EscuelaJava {
         Metodos metodos = new Metodos();
         boolean menu = true;
         String option = null;
-        String name = null, address = null;
+        String name = null;
+        String address = null;
         String schedule = null, typeTransport = null;
         String wordArea = null, typeOfContract = null;
         int age = 0, phone = 0, schoolYear = 0; 
@@ -31,15 +33,17 @@ public class EscuelaJava {
         double pensionValue = 0;
         while(menu) {
             option = JOptionPane.showInputDialog(
-                    null, 
-                    "************************"
-                    + "\nElige opción:"
-                    + "\n1.- Insertar un alumno" 
-                    + "\n2.- Insertar un funcionario"
-                    + "\n3.- Ver horario y medio de transporte de un usuario"
-                    + "\n4.- Imprimir()"
-                    + "\n0.- Salir "
-                    + "\n************************"
+                    null,
+                    """
+                    ************************"
+                    Elige opción:"
+                    1.- Insertar un alumno"\s
+                    2.- Insertar un funcionario"
+                    3.- Ver horario y medio de transporte de un usuario"
+                    4.- Imprimir()"
+                    0.- Salir "
+                    ************************
+                            """
             );
            
             switch(option) {
@@ -55,7 +59,7 @@ public class EscuelaJava {
                     pensionValue = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese valor de la pensión del alumno"));
                     schedule = JOptionPane.showInputDialog(null, "Ingrese el horario del alumno");
                     typeTransport = JOptionPane.showInputDialog(null, "Ingrese el tipo de transporte del alumno");
-                    Estudiante estudiante = new Estudiante(
+                    Student estudiante = new Student(
                             studentId, name, age, address, phone, schoolYear, pensionValue, schedule, typeTransport
                     );
                     metodos.setStudent(estudiante);
@@ -69,7 +73,7 @@ public class EscuelaJava {
                     typeOfContract = JOptionPane.showInputDialog(null, "Ingrese el tipo de contrato del funcionario");
                     schedule = JOptionPane.showInputDialog(null, "Ingrese el horario del funcionario");
                     typeTransport = JOptionPane.showInputDialog(null, "Ingrese el tipo de transporte del funcionario");
-                    Funcionario funcionario = new Funcionario(
+                    PublicWorkers funcionario = new PublicWorkers(
                             funcionarioId, name, age, address, phone, wordArea, typeOfContract, schedule, typeTransport
                     );
                     metodos.setFuncionario(funcionario);

@@ -2,23 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package datos;
+package models;
 
 /**
  *
  * @author
  */
-public class Funcionario extends Persona {
+public class PublicWorkers extends Person {
     
     private String wordArea;
     private String typeOfContract;
 
-    public Funcionario(String wordArea, String typeOfContract) {
+    public PublicWorkers(String wordArea, String typeOfContract) {
         this.wordArea = wordArea;
         this.typeOfContract = typeOfContract;
     }
 
-    public Funcionario(
+    public PublicWorkers(
             int id, String name, int age, String address, int phone,
             String wordArea, String typeOfContract,
             String schedule, String typeTransport

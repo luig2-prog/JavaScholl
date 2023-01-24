@@ -2,22 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package datos;
+package models;
 
 /**
  *
  * @author
  */
-public class Estudiante extends Persona {
+public class Student extends Person {
     
     private int schoolYear;
     private double pensionValue;
 
-    public Estudiante() {
+    public Student() {
         super();
     }
 
-    public Estudiante(
+    public Student(
             int id, String name, int age, String address, 
             int phone, int schoolYear, double pensionValue, 
             String schedule, String typeTransport
